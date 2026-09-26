@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="DAYFIT — Everyday essentials, made for your day.">
+  <title>DAYFIT | Everyday Essentials</title>
+  <link rel="icon" type="image/jpeg" href="assets/dayfit-logo.jpg">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="#home">
+        <img src="assets/dayfit-logo.jpg" alt="DAYFIT logo">
+        <span>DAYFIT</span>
+      </a>
+      <nav>
+        <a href="#shop">Shop</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <button class="cart-btn" id="cartOpen" aria-label="Open cart">
+        Cart <span id="cartCount">0</span>
+      </button>
+    </div>
+  </header>
+
+  <main id="home">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">DAYFIT / EVERYDAY ESSENTIALS</p>
+          <h1>Simple style.<br><span>Every single day.</span></h1>
+          <p class="hero-text">Clean, comfortable everyday wear designed for an effortless look.</p>
+          <a class="primary-btn" href="#shop">Shop T-Shirts</a>
+        </div>
+        <div class="hero-image">
+          <img src="assets/tee-black.jpg" alt="DAYFIT black t-shirt">
+          <div class="hero-badge">NEW<br><strong>DROP</strong></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="trust-strip">
+      <div class="container trust-grid">
+        <div><strong>COD</strong><span>Cash on Delivery</span></div>
+        <div><strong>SIZE</strong><span>S — XXL</span></div>
+        <div><strong>QUALITY</strong><span>Everyday Comfort</span></div>
+        <div><strong>SUPPORT</strong><span>Quick Response</span></div>
+      </div>
+    </section>
+
+    <section class="shop section" id="shop">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">SHOP</p>
+            <h2>Featured T-Shirts</h2>
+          </div>
+          <p>Choose your fit, add to cart and place your order.</p>
+        </div>
+        <div class="products" id="productGrid"></div>
+      </div>
+    </section>
+
+    <section class="about section" id="about">
+      <div class="container about-grid">
+        <div>
+          <p class="eyebrow">ABOUT DAYFIT</p>
+          <h2>Built around the clothes you reach for every day.</h2>
+        </div>
+        <p>DAYFIT focuses on clean silhouettes, wearable colours and comfortable everyday pieces. This starter store is designed to make ordering simple on mobile and easy for you to update as your collection grows.</p>
+      </div>
+    </section>
+
+    <section class="contact section" id="contact">
+      <div class="container contact-card">
+        <div>
+          <p class="eyebrow">NEED HELP?</p>
+          <h2>Talk to DAYFIT</h2>
+          <p>For size, product or delivery questions, contact us directly.<br><strong>Delivery:</strong> ৳60 inside Dhaka · ৳100 outside Dhaka<br><strong>Address:</strong> 130/1, Prembagan, Dakshinkhan, Dhaka-1230</p>
+        </div>
+        <div class="contact-actions">
+          <a class="secondary-btn" id="whatsappLink" href="#" target="_blank" rel="noopener">WhatsApp</a>
+          <a class="secondary-btn" id="phoneLink" href="#">Call</a>
+          <a class="secondary-btn" href="https://www.facebook.com/share/1FKpxVuiu6/" target="_blank" rel="noopener">Facebook</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <div class="brand footer-brand">
+        <img src="assets/dayfit-logo.jpg" alt="DAYFIT logo">
+        <span>DAYFIT</span>
+      </div>
+      <p>© <span id="year"></span> DAYFIT. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <div class="overlay" id="overlay"></div>
+
+  <aside class="cart-drawer" id="cartDrawer" aria-label="Shopping cart">
+    <div class="cart-head">
+      <h3>Your Cart</h3>
+      <button id="cartClose" class="icon-btn" aria-label="Close cart">×</button>
+    </div>
+    <div id="cartItems" class="cart-items"></div>
+    <div class="cart-footer">
+      <div class="total-row"><span>Subtotal</span><strong id="cartTotal">৳0</strong></div>
+      <button class="primary-btn full" id="checkoutOpen">Checkout</button>
+    </div>
+  </aside>
+
+  <div class="modal" id="checkoutModal">
+    <div class="modal-card">
+      <div class="cart-head">
+        <h3>Place Your Order</h3>
+        <button id="checkoutClose" class="icon-btn" aria-label="Close">×</button>
+      </div>
+      <form id="checkoutForm">
+        <label>Full name<input required name="name" placeholder="Your name"></label>
+        <label>Mobile number<input required name="phone" inputmode="tel" placeholder="01XXXXXXXXX"></label>
+        <label>Delivery address<textarea required name="address" rows="3" placeholder="Full delivery address"></textarea></label>
+        <label>Payment
+          <select name="payment">
+            <option>Cash on Delivery</option>
+            <option>bKash (contact seller)</option>
+            <option>Nagad (contact seller)</option>
+          </select>
+        </label>
+        <div class="order-summary" id="orderSummary"></div>
+        <button class="primary-btn full" type="submit">Send Order on WhatsApp</button>
+        <p class="tiny">Your order will open in WhatsApp for confirmation. Replace the WhatsApp number in <b>script.js</b> before publishing.</p>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
